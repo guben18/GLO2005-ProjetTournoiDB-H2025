@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Inscription - TournoiPedia</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-links">
+                <a href="connexion.html">Connexion</a>
+                <a href="inscription.html">Inscription</a>
+            </div>
+            <div class="nav-links">
+                <a href="/search">Recherche</a>
+                <a href="/create-team">Créer une équipe</a>
+                <a href="/create-tournament">Créer un tournoi</a>
+            </div>
+        </div>
+    </header>
+    <div class="inscription">
+        <h2>Inscription</h2>
+        <form id="formulaire-inscription" action="/register" method="POST">
+            <label for="username">Pseudo : </label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="email">Courriel :</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="confirm-password">Confirmer mot de passe:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required><br><br>
+
+            <label for="ddn">Date de naissance (facultatif) :</label>
+            <input type="date" id="ddn" name="ddn"><br><br>
+
+            <label for="pays">Pays (facultatif) :</label>
+            <input type="text" id="pays" name="pays"><br><br>
+
+            
+            <label for="role">Inscription en tant que :</label>
+            <select id="role" name="role" required>
+                <option value="">Sélectionnez un rôle </option>
+                <option value="joueur">Joueur</option>
+                <option value="organisateur">Organisateur</option>
+            </select><br><br>
+
+            <button type="submit">Enregistrer</button>
+        </form>
+        <p id="error-message"></p>
+    </div>
+</body>
+</html>
